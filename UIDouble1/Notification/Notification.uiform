@@ -1,0 +1,19 @@
+﻿{
+  "Metadata": {
+    "Id": "5478f708-67dd-4f60-8f42-589156b14f5b",
+    "DisplayName": "Notification",
+    "Kind": "FormIo"
+  },
+  "Data": {
+    "components": [
+      {
+        "content": "Loading...",
+        "key": "message",
+        "input": false,
+        "tableView": false,
+        "label": "Label",
+        "type": "label"
+      }
+    ]
+  }
+}
