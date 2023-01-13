@@ -1,0 +1,280 @@
+﻿<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ufa="clr-namespace:UiPath.Forms.Activities;assembly=UiPath.Forms.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:upt="clr-namespace:UiPath.Platform.Triggers;assembly=UiPath.Platform" xmlns:uuat="clr-namespace:UiPath.UIAutomationNext.Activities.Triggers;assembly=UiPath.UIAutomationNext.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Studio.Forms.Runtime</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Forms.Activities</x:String>
+      <x:String>UiPath.Platform.GlobalVariables</x:String>
+      <x:String>UiPath.Forms.Activities.Base</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="48">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Forms.Runtime</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Forms.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence>
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Boolean" Default="[false]" Name="StopTriggersVariable" />
+    </Sequence.Variables>
+    <upt:InterruptibleTriggerInitializer />
+    <Parallel CompletionCondition="[StopTriggersVariable]">
+      <ui:TriggerScope ContinueOnError="{x:Null}" SchedulingMode="Concurrent">
+        <ui:TriggerScope.Action>
+          <ActivityAction x:TypeArguments="uuat:MonitorClickEventArgs">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="uuat:MonitorClickEventArgs" Name="TriggerEventArgs" />
+            </ActivityAction.Argument>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="DoubleUI\on accept clicked.xaml - Invoke Workflow File" Level="{x:Null}" LogEntry="{x:Null}" LogExit="{x:Null}" Timeout="{x:Null}" UnSafe="False" WorkflowFileName="DoubleUI\on accept clicked.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="uuat:MonitorClickEventArgs" x:Key="TriggerEventArgs">[TriggerEventArgs]</InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+          </ActivityAction>
+        </ui:TriggerScope.Action>
+        <ui:TriggerScope.Triggers>
+          <scg:List x:TypeArguments="Activity" Capacity="1">
+            <uix:NClickTrigger BlockEvent="True" Button="Left" DisplayName="Click Trigger 'Accept'" Enabled="True" sap:VirtualizedContainerService.HintSize="478,201" sap2010:WorkflowViewState.IdRef="NClickTrigger_10" InScope="{x:Null}" IncludeChildren="True" KeyModifiers="None" Mode="Down" SchedulingMode="Concurrent" TriggerId="b83f5dd7-4b2a-46ea-b942-0ebbf2afa63a" Version="V3">
+              <uix:NClickTrigger.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="441, 546, 80, 31" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Accept'" FullSelectorArgument="&lt;ctrl name='Accept' role='push button' /&gt;" Guid="c28ae333-4261-4437-8fb6-6b041e1ba875" InformativeScreenshot="621fff04caff2d74eab2dea6a67b4834.png" ScopeSelectorArgument="&lt;wnd app='doubleui.exe' cls='HwndWrapper*' title='DoubleUI' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NClickTrigger.Target>
+            </uix:NClickTrigger>
+          </scg:List>
+        </ui:TriggerScope.Triggers>
+      </ui:TriggerScope>
+      <ui:TriggerScope ContinueOnError="{x:Null}" SchedulingMode="Concurrent">
+        <ui:TriggerScope.Action>
+          <ActivityAction x:TypeArguments="uuat:TextChangedArgs">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="uuat:TextChangedArgs" Name="TriggerEventArgs" />
+            </ActivityAction.Argument>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="DoubleUI\on cash in changed.xaml - Invoke Workflow File" Level="{x:Null}" LogEntry="{x:Null}" LogExit="{x:Null}" Timeout="{x:Null}" UnSafe="False" WorkflowFileName="DoubleUI\on cash in changed.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="uuat:TextChangedArgs" x:Key="TriggerEventArgs">[TriggerEventArgs]</InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+          </ActivityAction>
+        </ui:TriggerScope.Action>
+        <ui:TriggerScope.Triggers>
+          <scg:List x:TypeArguments="Activity" Capacity="1">
+            <uix:NNativeEventTrigger x:TypeArguments="uuat:TextChangedArgs" AvailableEventTypes="CtrlTextChange,CtrlFocusGained,CtrlFocusLost,ElementAppeared,ElementDisappeared,CtrlStateChanged,CtrlSelectionChanged,CtrlLocationChanged" DisplayName="Application Event Trigger 'editable text cashintb'" Enabled="True" EventType="CtrlTextChange" sap:VirtualizedContainerService.HintSize="358,178" sap2010:WorkflowViewState.IdRef="NNativeEventTrigger`1_11" InScope="{x:Null}" IncludeChildren="{x:Null}" SchedulingMode="Concurrent" TriggerId="11df5015-e3f7-4781-83cd-8e3366fd6c3d" Version="V3">
+              <uix:NNativeEventTrigger.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="333, 169, 120, 23" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'editable text cashintb'" FullSelectorArgument="&lt;ctrl automationid='cashintb' /&gt;" Guid="0fa624be-12b9-49a4-81ad-f51b3e452c77" InformativeScreenshot="7da198effe4ad7e5268a078ccd84ae9d.png" ScopeSelectorArgument="&lt;wnd app='doubleui.exe' cls='HwndWrapper*' title='DoubleUI' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NNativeEventTrigger.Target>
+            </uix:NNativeEventTrigger>
+          </scg:List>
+        </ui:TriggerScope.Triggers>
+      </ui:TriggerScope>
+      <ui:TriggerScope ContinueOnError="{x:Null}" SchedulingMode="Concurrent">
+        <ui:TriggerScope.Action>
+          <ActivityAction x:TypeArguments="uuat:EmptyArgs">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="uuat:EmptyArgs" Name="TriggerEventArgs" />
+            </ActivityAction.Argument>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="DoubleUI\on closed.xaml - Invoke Workflow File" Level="{x:Null}" LogEntry="{x:Null}" LogExit="{x:Null}" Timeout="{x:Null}" UnSafe="False" WorkflowFileName="DoubleUI\on closed.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="uuat:EmptyArgs" x:Key="TriggerEventArgs">[TriggerEventArgs]</InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+          </ActivityAction>
+        </ui:TriggerScope.Action>
+        <ui:TriggerScope.Triggers>
+          <scg:List x:TypeArguments="Activity" Capacity="1">
+            <uix:NNativeEventTrigger x:TypeArguments="uuat:EmptyArgs" AvailableEventTypes="ElementAppeared,ElementDisappeared,CtrlTextChange,CtrlFocusGained,CtrlFocusLost,CtrlStateChanged,CtrlSelectionChanged,CtrlLocationChanged,ForegroundGained,WndMinimized,WndRestored" DisplayName="Application Event Trigger 'DoubleUI'" Enabled="True" EventType="ElementDisappeared" sap:VirtualizedContainerService.HintSize="358,177" sap2010:WorkflowViewState.IdRef="NNativeEventTrigger`1_12" InScope="{x:Null}" IncludeChildren="{x:Null}" SchedulingMode="Concurrent" TriggerId="437eade1-8458-4312-aed2-e2692e07c6ed" Version="V3">
+              <uix:NNativeEventTrigger.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 626, 629" DesignTimeScaleFactor="1" FriendlyName="'DoubleUI'" Guid="d10f0f0f-3a19-43b1-8a82-6536248db485" InformativeScreenshot="02ed34b83a2826265df5eea742b00acd.png" ScopeSelectorArgument="&lt;wnd app='doubleui.exe' cls='HwndWrapper*' title='DoubleUI' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NNativeEventTrigger.Target>
+            </uix:NNativeEventTrigger>
+          </scg:List>
+        </ui:TriggerScope.Triggers>
+      </ui:TriggerScope>
+      <ui:TriggerScope ContinueOnError="{x:Null}" SchedulingMode="Concurrent">
+        <ui:TriggerScope.Action>
+          <ActivityAction x:TypeArguments="uuat:HwndArgs">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="uuat:HwndArgs" Name="TriggerEventArgs" />
+            </ActivityAction.Argument>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="DoubleUI\on foreground gained.xaml - Invoke Workflow File" Level="{x:Null}" LogEntry="{x:Null}" LogExit="{x:Null}" Timeout="{x:Null}" UnSafe="False" WorkflowFileName="DoubleUI\on foreground gained.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="uuat:HwndArgs" x:Key="TriggerEventArgs">[TriggerEventArgs]</InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+          </ActivityAction>
+        </ui:TriggerScope.Action>
+        <ui:TriggerScope.Triggers>
+          <scg:List x:TypeArguments="Activity" Capacity="1">
+            <uix:NNativeEventTrigger x:TypeArguments="uuat:HwndArgs" AvailableEventTypes="ElementAppeared,ElementDisappeared,CtrlTextChange,CtrlFocusGained,CtrlFocusLost,CtrlStateChanged,CtrlSelectionChanged,CtrlLocationChanged,ForegroundGained,WndMinimized,WndRestored" DisplayName="Application Event Trigger 'DoubleUI'" Enabled="True" EventType="ForegroundGained" sap:VirtualizedContainerService.HintSize="434,177" sap2010:WorkflowViewState.IdRef="NNativeEventTrigger`1_23" InScope="{x:Null}" IncludeChildren="{x:Null}" SchedulingMode="Concurrent" TriggerId="c8338f70-96a8-44a3-be6a-ad587b680544" Version="V3">
+              <uix:NNativeEventTrigger.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 626, 629" DesignTimeScaleFactor="1" FriendlyName="'DoubleUI'" Guid="36812439-a0a0-4251-95f9-52571b982bca" InformativeScreenshot="c60ce8104d7bc3da216ae54fa1be526d.png" ScopeSelectorArgument="&lt;wnd app='doubleui.exe' cls='HwndWrapper*' title='DoubleUI' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NNativeEventTrigger.Target>
+            </uix:NNativeEventTrigger>
+          </scg:List>
+        </ui:TriggerScope.Triggers>
+      </ui:TriggerScope>
+      <ui:TriggerScope ContinueOnError="{x:Null}" SchedulingMode="Concurrent">
+        <ui:TriggerScope.Action>
+          <ActivityAction x:TypeArguments="uuat:HwndArgs">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="uuat:HwndArgs" Name="TriggerEventArgs" />
+            </ActivityAction.Argument>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="DoubleUI\on minimize.xaml - Invoke Workflow File" Level="{x:Null}" LogEntry="{x:Null}" LogExit="{x:Null}" Timeout="{x:Null}" UnSafe="False" WorkflowFileName="DoubleUI\on minimize.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="uuat:HwndArgs" x:Key="TriggerEventArgs">[TriggerEventArgs]</InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+          </ActivityAction>
+        </ui:TriggerScope.Action>
+        <ui:TriggerScope.Triggers>
+          <scg:List x:TypeArguments="Activity" Capacity="1">
+            <uix:NNativeEventTrigger x:TypeArguments="uuat:HwndArgs" AvailableEventTypes="ElementAppeared,ElementDisappeared,CtrlTextChange,CtrlFocusGained,CtrlFocusLost,CtrlStateChanged,CtrlSelectionChanged,CtrlLocationChanged,ForegroundGained,WndMinimized,WndRestored" DisplayName="Application Event Trigger 'DoubleUI'" Enabled="True" EventType="WndMinimized" sap:VirtualizedContainerService.HintSize="358,177" sap2010:WorkflowViewState.IdRef="NNativeEventTrigger`1_14" InScope="{x:Null}" IncludeChildren="{x:Null}" SchedulingMode="Concurrent" TriggerId="fe1bcd05-5303-4aec-a1d1-616581af60a4" Version="V3">
+              <uix:NNativeEventTrigger.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 626, 629" DesignTimeScaleFactor="1" FriendlyName="'DoubleUI'" Guid="fd9094be-0901-4f92-9bad-b462db7267c2" InformativeScreenshot="51a22fc0416dcd4197016e42ddae8719.png" ScopeSelectorArgument="&lt;wnd app='doubleui.exe' cls='HwndWrapper*' title='DoubleUI' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NNativeEventTrigger.Target>
+            </uix:NNativeEventTrigger>
+          </scg:List>
+        </ui:TriggerScope.Triggers>
+      </ui:TriggerScope>
+      <ui:TriggerScope ContinueOnError="{x:Null}" SchedulingMode="Concurrent">
+        <ui:TriggerScope.Action>
+          <ActivityAction x:TypeArguments="uuat:LocationChangedArgs">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="uuat:LocationChangedArgs" Name="TriggerEventArgs" />
+            </ActivityAction.Argument>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="DoubleUI\on move.xaml - Invoke Workflow File" Level="{x:Null}" LogEntry="{x:Null}" LogExit="{x:Null}" Timeout="{x:Null}" UnSafe="False" WorkflowFileName="DoubleUI\on move.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="uuat:LocationChangedArgs" x:Key="TriggerEventArgs">[TriggerEventArgs]</InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+          </ActivityAction>
+        </ui:TriggerScope.Action>
+        <ui:TriggerScope.Triggers>
+          <scg:List x:TypeArguments="Activity" Capacity="1">
+            <uix:NNativeEventTrigger x:TypeArguments="uuat:LocationChangedArgs" AvailableEventTypes="ElementAppeared,ElementDisappeared,CtrlTextChange,CtrlFocusGained,CtrlFocusLost,CtrlStateChanged,CtrlSelectionChanged,CtrlLocationChanged,ForegroundGained,WndMinimized,WndRestored" DisplayName="Application Event Trigger 'DoubleUI'" Enabled="True" EventType="CtrlLocationChanged" sap:VirtualizedContainerService.HintSize="554,177" sap2010:WorkflowViewState.IdRef="NNativeEventTrigger`1_15" InScope="{x:Null}" IncludeChildren="{x:Null}" SchedulingMode="Concurrent" TriggerId="e6523da3-41a3-4699-b5ef-076426d041fd" Version="V3">
+              <uix:NNativeEventTrigger.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 626, 629" DesignTimeScaleFactor="1" FriendlyName="'DoubleUI'" Guid="7ab0a66a-c8b3-48a2-a279-66a7a43d60ee" InformativeScreenshot="0ac48d84e0899fc61a37b89f94f2a67b.png" ScopeSelectorArgument="&lt;wnd app='doubleui.exe' cls='HwndWrapper*' title='DoubleUI' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NNativeEventTrigger.Target>
+            </uix:NNativeEventTrigger>
+          </scg:List>
+        </ui:TriggerScope.Triggers>
+      </ui:TriggerScope>
+      <ui:TriggerScope ContinueOnError="{x:Null}" SchedulingMode="Concurrent">
+        <ui:TriggerScope.Action>
+          <ActivityAction x:TypeArguments="uuat:TextChangedArgs">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="uuat:TextChangedArgs" Name="TriggerEventArgs" />
+            </ActivityAction.Argument>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="DoubleUI\on us check changed.xaml - Invoke Workflow File" Level="{x:Null}" LogEntry="{x:Null}" LogExit="{x:Null}" Timeout="{x:Null}" UnSafe="False" WorkflowFileName="DoubleUI\on us check changed.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="uuat:TextChangedArgs" x:Key="TriggerEventArgs">[TriggerEventArgs]</InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+          </ActivityAction>
+        </ui:TriggerScope.Action>
+        <ui:TriggerScope.Triggers>
+          <scg:List x:TypeArguments="Activity" Capacity="1">
+            <uix:NNativeEventTrigger x:TypeArguments="uuat:TextChangedArgs" AvailableEventTypes="CtrlTextChange,CtrlFocusGained,CtrlFocusLost,ElementAppeared,ElementDisappeared,CtrlStateChanged,CtrlSelectionChanged,CtrlLocationChanged" DisplayName="Application Event Trigger 'editable text onustb'" Enabled="True" EventType="CtrlTextChange" sap:VirtualizedContainerService.HintSize="358,177" sap2010:WorkflowViewState.IdRef="NNativeEventTrigger`1_16" InScope="{x:Null}" IncludeChildren="{x:Null}" SchedulingMode="Concurrent" TriggerId="0b3fd5d2-12ff-4b4d-88c0-072adcf07d54" Version="V3">
+              <uix:NNativeEventTrigger.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="333, 208, 120, 23" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'editable text onustb'" FullSelectorArgument="&lt;ctrl automationid='onustb' /&gt;" Guid="ea5b8b23-c3b6-4029-90d0-cb4373c9bd71" InformativeScreenshot="eb0fd4845d2d82dfce4f4ef491b7fe86.png" ScopeSelectorArgument="&lt;wnd app='doubleui.exe' cls='HwndWrapper*' title='DoubleUI' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NNativeEventTrigger.Target>
+            </uix:NNativeEventTrigger>
+          </scg:List>
+        </ui:TriggerScope.Triggers>
+      </ui:TriggerScope>
+      <ui:TriggerScope ContinueOnError="{x:Null}" SchedulingMode="Concurrent">
+        <ui:TriggerScope.Action>
+          <ActivityAction x:TypeArguments="ufa:FormInfoTriggerEventArgs">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ufa:FormInfoTriggerEventArgs" Name="TriggerEventArgs" />
+            </ActivityAction.Argument>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Welcome\on button click.xaml - Invoke Workflow File" Level="{x:Null}" LogEntry="{x:Null}" LogExit="{x:Null}" Timeout="{x:Null}" UnSafe="False" WorkflowFileName="Welcome\on button click.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="ufa:FormInfoTriggerEventArgs" x:Key="TriggerEventArgs">[TriggerEventArgs]</InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+          </ActivityAction>
+        </ui:TriggerScope.Action>
+        <ui:TriggerScope.Triggers>
+          <scg:List x:TypeArguments="Activity" Capacity="1">
+            <ufa:FormTriggerActivity x:TypeArguments="ufa:FormInfoTriggerEventArgs" DisplayName="Form trigger activity - click Close" Enabled="True" Event="click.open" FormId="a988ff0a-d449-4969-88e3-d0298bd92cf6" sap:VirtualizedContainerService.HintSize="434,186" sap2010:WorkflowViewState.IdRef="FormTriggerActivity`1_17" SchedulingMode="Concurrent" Tag="{x:Null}" TriggerId="e41347ee-e6ee-4ca0-a270-e44458825400" />
+          </scg:List>
+        </ui:TriggerScope.Triggers>
+      </ui:TriggerScope>
+      <ui:TriggerScope ContinueOnError="{x:Null}" SchedulingMode="Concurrent">
+        <ui:TriggerScope.Action>
+          <ActivityAction x:TypeArguments="ufa:FormInfoTriggerEventArgs">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ufa:FormInfoTriggerEventArgs" Name="TriggerEventArgs" />
+            </ActivityAction.Argument>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Welcome\on close.xaml - Invoke Workflow File" Level="{x:Null}" LogEntry="{x:Null}" LogExit="{x:Null}" Timeout="{x:Null}" UnSafe="False" WorkflowFileName="Welcome\on close.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="ufa:FormInfoTriggerEventArgs" x:Key="TriggerEventArgs">[TriggerEventArgs]</InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+          </ActivityAction>
+        </ui:TriggerScope.Action>
+        <ui:TriggerScope.Triggers>
+          <scg:List x:TypeArguments="Activity" Capacity="1">
+            <ufa:FormTriggerActivity x:TypeArguments="ufa:FormInfoTriggerEventArgs" DisplayName="Form trigger activity - Form closed" Enabled="True" Event="window.closed" FormId="a988ff0a-d449-4969-88e3-d0298bd92cf6" sap:VirtualizedContainerService.HintSize="358,186" sap2010:WorkflowViewState.IdRef="FormTriggerActivity`1_18" SchedulingMode="Concurrent" Tag="{x:Null}" TriggerId="e861aaa3-a7cd-47de-b4c3-640bceb19c16" />
+          </scg:List>
+        </ui:TriggerScope.Triggers>
+      </ui:TriggerScope>
+    </Parallel>
+  </Sequence>
+</Activity>

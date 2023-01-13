@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="NMytEFS_2EyKg_l_dnb3mw" Reference="y_jcOU7IcE6Nz0OmU_5dFw/qRDSgqMARE6GiZa-1UOUtw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="0, 0, 1248, 925" DesignTimeScaleFactor="1" FriendlyName="'Application Event Trigger 'Untitled - Notepad''" Guid="aee444aa-0db4-4445-b7e3-29742bfa1204" ImageBase64="" ScopeSelectorArgument="&lt;wnd app='notepad.exe' cls='Notepad' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="b9834ea7be3d8738924cfadaa1164769.png" xmlns="">0QIukSP6IkkGgyWw2J7lTHw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">NativeTrigger</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

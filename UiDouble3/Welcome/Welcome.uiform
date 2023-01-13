@@ -1,0 +1,28 @@
+﻿{
+  "Metadata": {
+    "Id": "a988ff0a-d449-4969-88e3-d0298bd92cf6",
+    "DisplayName": "Welcome",
+    "Kind": "FormIo"
+  },
+  "Data": {
+    "components": [
+      {
+        "content": "Welcome to the Attended Automation Triggers template.\n<br/><br/>\nThis template uses the new Forms engine (go to \"New -> Form\" to create a new one), as well as a simple application trigger.",
+        "key": "label",
+        "input": false,
+        "tableView": false,
+        "label": "Label",
+        "type": "label"
+      },
+      {
+        "label": "Open Banking App",
+        "action": "event",
+        "showValidations": false,
+        "tableView": false,
+        "key": "open",
+        "type": "button",
+        "input": true
+      }
+    ]
+  }
+}

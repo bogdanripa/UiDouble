@@ -1,0 +1,17 @@
+﻿{
+  "Id": "V8Voy-t4M0Wt5iCElZ6zXg",
+  "Reference": "y_jcOU7IcE6Nz0OmU_5dFw/V8Voy-t4M0Wt5iCElZ6zXg",
+  "ParentRef": "y_jcOU7IcE6Nz0OmU_5dFw/Qzuks0JEY0yd4DUK8vkGiQ",
+  "Name": "Editor window",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2023-01-12T09:07:51.2590504Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=23.2.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=22.12.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2023-01-12T09:11:34.5863774Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=22.12.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
